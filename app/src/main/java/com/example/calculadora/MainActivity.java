@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private  string number ="";
+    private  String number ="";
     public double num1 = 0;
-    private doubble num2 = 0;
+    private double num2 = 0;
     protected String symbol;
 
 
