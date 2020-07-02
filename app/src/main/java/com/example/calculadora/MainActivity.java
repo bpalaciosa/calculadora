@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private TextView solucion;
-    private Button keyPad5, keyPad8, keyPad3, keyPaddos,
-    private Button keyPadSum, keyPadSubstract, keyPadMultiply, keyPadEqual, equal;
+    private Button keyPad1, keyPad2, keyPad3, keyPad4, keyPad5, keyPad6, keyPad7, keyPad8, keyPad9, keyPad0;
+    private Button keyPadSum, keyPadSubstract, keyPadDivision, keyPadMultiply, keyPadEqual, keyPadCE;
 
 
     @Override
@@ -28,21 +28,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         solucion =  findViewById(R.id.solucion);
 
-        keyPad5 = findViewById(R.id.num_cuatro);
+        keyPad1 = findViewById(R.id.num_uno);
         keyPad2 = findViewById(R.id.num_dos);
+        keyPad3 = findViewById(R.id.num_tres);
+        keyPad4 = findViewById(R.id.num_cuatro);
+        keyPad5 = findViewById(R.id.num_cinco);
+        keyPad6 = findViewById(R.id.num_seis);
+        keyPad7 = findViewById(R.id.num_siete);
+        keyPad8 = findViewById(R.id.num_ocho);
+        keyPad9 = findViewById(R.id.num_nueve);
+        keyPad0 = findViewById(R.id.num_cero);
+
 
 
         keyPadSum = findViewById(R.id.sum);
-        keyPadSubstract = findViewById(R.id.division);
+        keyPadSubstract = findViewById(R.id.substract);
+        keyPadDivision = findViewById(R.id.division);
+        keyPadMultiply = findViewById(R.id.multiply);
+        keyPadEqual = findViewById(R.id.equal);
+        keyPadCE = findViewById(R.id.CE);
 
         //listener for button
-
-        keyPad5.setOnClickListener(this);
+        keyPad1.setOnClickListener(this);
         keyPad2.setOnClickListener(this);
+        keyPad3.setOnClickListener(this);
+        keyPad4.setOnClickListener(this);
+        keyPad5.setOnClickListener(this);
+        keyPad6.setOnClickListener(this);
+        keyPad7.setOnClickListener(this);
+        keyPad8.setOnClickListener(this);
+        keyPad9.setOnClickListener(this);
+        keyPad0.setOnClickListener(this);
+
 
 
         keyPadSum.setOnClickListener(this);
         keyPadSubstract.setOnClickListener(this);
+        keyPadEqual.setOnClickListener(this);
+        keyPadCE.setOnClickListener(this);
+        keyPadMultiply.setOnClickListener(this);
+        keyPadDivision.setOnClickListener(this);
 
     }
 
@@ -61,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.num_dos:
-                number = number + "";
+                number = number + "2";
                 solucion.setText(number);
                 break;
 
@@ -129,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 switch (symbol){
                     case "+":
-                        solucion.setText( (num1 + num2));
+                        solucion.setText("solucion: " + (num1 + num2));
                         break;
                     case "-":
                         solucion.setText("solucion: " + (num1 - num2));
